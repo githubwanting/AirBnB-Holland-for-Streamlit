@@ -39,7 +39,7 @@ dataframe["Meters from chosen loaction"] = dataframe["Meters from chosen locatio
 
 # Rename the number to a string
 dataframe["Location"] = dataframe["Location"].replace(
-    {1: "To visit", 0: "Airbnb listing"}
+    {1.0: "To visit", 0.0: "Airbnb listing"}
 )
 
 # Display dataframe and text
