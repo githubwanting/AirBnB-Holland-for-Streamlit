@@ -33,8 +33,7 @@ dataframe = dataframe[dataframe["Price"] >= 10]
 dataframe["Airbnb Listing ID"] = dataframe["Airbnb Listing ID"].astype(int)
 # Round of values
 dataframe["Price"] = "€ " + dataframe["Price"].round(2).astype(str) # <--- changes to correct Euro currency
-# Round of values
-dataframe["Meters from chosen location"] = dataframe["Meters from chosen location"].round(0) # <--- meter distance rounded
+
 
 
 # Rename the number to a string
