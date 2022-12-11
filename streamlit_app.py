@@ -22,20 +22,14 @@ dataframe = pd.read_csv(
 # We have a limited budget, therefore we would like to exclude
 # listings with a price above 100 EUR per night
 dataframe = dataframe[dataframe["Price"] <= 100]
-
-#TW We also hate fake listings, therefore we would like to exclude
+# TW We also hate fake listings, therefore we would like to exclude
 # listings with a price below 10 EUR per night
-
 dataframe = dataframe[dataframe["Price"] >= 10]
-
 
 # Display as integer
 dataframe["Airbnb Listing ID"] = dataframe["Airbnb Listing ID"].astype(int)
 # Round of values
 dataframe["Price"] = "€ " + dataframe["Price"].round(2).astype(str) # <--- changes to correct Euro currency
-
-
-
 # Rename the number to a string
 dataframe["Location"] = dataframe["Location"].replace(
     {1.0: "To visit", 0.0: "Airbnb listing"}
